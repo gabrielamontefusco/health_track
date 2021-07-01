@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Health Track</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+  </head>
+  <body class="background">
+    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <main>
+            <button class="btn btn-icon burger-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+          <button type="button" class="btn btn-warning"><a href="index.html"> HOME </a></button>
+          <div class="offcanvas-header">
+            
+            <p></p>
+            <h4 id="offcanvasTopLabel">CADASTRAR</h4>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+                <button type="button" class="btn btn-warning"> Alimento </button>
+                <button type="button" class="btn btn-warning"> Atividade Física </button>
+                <button type="button" class="btn btn-warning"> Batimento Cardíaco </button>
+                
+  </div>
+</div>
+
+
+  <img class="logo" src="logo_health.png">    
+</main>     
+<section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+         
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content w-100">
+            <div class="calendar-container">
+              <div class="calendar"> 
+                <div class="year-header"> 
+                  <span class="left-button fa fa-chevron-left" id="prev"> </span> 
+                  <span class="year" id="label"></span> 
+                  <span class="right-button fa fa-chevron-right" id="next"> </span>
+                </div> 
+                <table class="months-table w-100"> 
+                  <tbody>
+                    <tr class="months-row">
+                      <td class="month">Jan</td> 
+                      <td class="month">Fev</td> 
+                      <td class="month">Mar</td> 
+                      <td class="month">Abr</td> 
+                      <td class="month">Mar</td> 
+                      <td class="month">Jun</td> 
+                      <td class="month">Jul</td>
+                      <td class="month">Ago</td> 
+                      <td class="month">Set</td> 
+                      <td class="month">Out</td>          
+                      <td class="month">Nov</td>
+                      <td class="month">Dez</td>
+                    </tr>
+                  </tbody>
+                </table> 
+                
+                <table class="days-table w-100"> 
+                  <td class="day">Dom</td> 
+                  <td class="day">Seg</td> 
+                  <td class="day">Ter</td> 
+                  <td class="day">Qua</td> 
+                  <td class="day">Qui</td> 
+                  <td class="day">Sex</td> 
+                  <td class="day">Sab</td>
+                </table> 
+                <div class="frame"> 
+                  <table class="dates-table w-100"> 
+                    <tbody class="tbody">             
+                    </tbody> 
+                  </table>
+                </div> 
+                <button class="button" id="add-button">Adicionar</button>
+              </div>
+            </div>
+            <div class="events-container">
+            </div>
+            <div class="dialog" id="dialog">
+                <h2 class="dialog-header"> Atividade Física </h2>
+                <form class="form" id="form">
+                  <div class="form-container" align="center">
+                    <label class="form-label" id="valueFromMyButton" for="name">Atividade</label>
+                    <input class="input" type="text" id="name" maxlength="36">
+                    <label class="form-label" id="valueFromMyButton" for="count">Duração (minutos)</label>
+                    <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+                    <input type="button" value="Cancel" class="button" id="cancel-button">
+                    <input type="button" value="OK" class="button button-white" id="ok-button">
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+       
+
+
+    
+  </body>
+</html>
